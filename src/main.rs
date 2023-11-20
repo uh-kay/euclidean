@@ -1,9 +1,8 @@
 fn main()  {
-    let x = euclidean(210, 45);
-    println!("{x}");
+    
 }
 
-fn euclidean(mut a: i32, mut b: i32) -> i32 {
+pub fn euclidean(mut a: i32, mut b: i32) -> i32 {
     while b != 0 {
         let t = b;
         b = a % b;
@@ -11,3 +10,17 @@ fn euclidean(mut a: i32, mut b: i32) -> i32 {
     }   
     return a;
 }
+
+// Substraction-based version
+
+// pub fn euclidean(mut a: i32, mut b: i32) -> i32 {
+//     while a != b {
+//         if a > b {
+//             a -= b;
+//         }
+//         else {
+//             b -= a;
+//         }
+//     }
+//     return a;
+// }
