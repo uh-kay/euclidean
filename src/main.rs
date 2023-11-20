@@ -24,3 +24,13 @@ pub fn euclidean(mut a: i32, mut b: i32) -> i32 {
 //     }
 //     return a;
 // }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn it_finds_gcd() {
+        assert_eq!(15, euclidean(210, 45));
+    }
+}
